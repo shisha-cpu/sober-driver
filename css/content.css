@@ -295,3 +295,30 @@ section {
         width: 100svw !important;
     }
 }
+.qwq {
+    position: relative; /* Чтобы разместить псевдоэлемент относительно родителя */
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url(/img/about.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.about-content {
+    position: relative; /* Чтобы текст не накладывался на псевдоэлемент */
+    z-index: 1; /* Поднимаем контент выше псевдоэлемента */
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление теней к тексту для улучшения читаемости */
+}
+
+.qwq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    z-index: 0; /* Ставим псевдоэлемент за текст */
+}
