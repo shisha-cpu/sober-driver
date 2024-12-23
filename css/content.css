@@ -289,3 +289,9 @@ section {
         display: none;
     }
 }
+
+@media (max-width : 800px) {
+    .feesback-b{
+        width: 100svw !important;
+    }
+}
