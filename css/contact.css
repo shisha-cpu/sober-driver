@@ -1,0 +1,34 @@
+.messengers {
+    margin-top: 20px;
+}
+
+.messengers a {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+.messengers a:hover {
+    background-color: #e1e1e1;
+}
+
+.whatsapp {
+    color: #25D366 !important;
+}
+
+.telegram {
+    color: #0088cc !important;
+}
+
+.messengers img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
