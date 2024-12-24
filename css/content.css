@@ -299,14 +299,36 @@ section {
     position: relative; 
     min-width: 100vw;
     min-height: 100vh;
+    
+    position: relative; /* Чтобы текст не накладывался на псевдоэлемент */
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.fir{
     background: url(https://i.postimg.cc/B61sx6f8/about.png);
     background-size: cover;
     background-position: center center;
 }
-
-.about-content {
+.sec{
+    background: url(https://i.postimg.cc/yNCdcttM/sec.png);
+    background-size: cover;
+    background-position: center center;
+}
+.thir{
+    background: url(https://i.postimg.cc/ZqmbC3yZ/snapedit-1735052925489.png);
+    background-size: cover;
+    background-position: center center;
+}
+.four{
+    background: url(https://i.postimg.cc/MZnnk77r/16defb238bd091af6fe1ba8f287223c2-1.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.content-block {
     position: relative; /* Чтобы текст не накладывался на псевдоэлемент */
-    z-index: 1; /* Поднимаем контент выше псевдоэлемента */
+    z-index: 1;
     padding: 20px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление теней к тексту для улучшения читаемости */
