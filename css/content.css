@@ -296,10 +296,10 @@ section {
     }
 }
 .qwq {
-    position: relative; /* Чтобы разместить псевдоэлемент относительно родителя */
+    position: relative; 
     min-width: 100vw;
     min-height: 100vh;
-    background: url(/img/about.png);
+    background: url(https://ltdfoto.ru/images/2024/12/24/about.png);
     background-size: cover;
     background-position: center center;
 }
