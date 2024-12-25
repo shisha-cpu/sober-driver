@@ -55,3 +55,44 @@ window.addEventListener('scroll', updateProgressBar);
 
 // Вызываем функцию сразу, чтобы ползунок отобразился корректно при загрузке страницы
 updateProgressBar();
+function updateGreeting() {
+    const hours = new Date().getHours();
+    const greetingLink = document.getElementById("greeting-link");
+
+    let message = "";
+    if (hours >= 6 && hours < 12) {
+        message = "Доброе утро! Новый день — новые приключения!";
+    } else if (hours >= 12 && hours < 18) {
+        message = "Добрый день! Ваш безопасный путь начинается здесь.";
+    } else {
+        message = "После вечеринки? Мы доставим вас домой в безопасности!";
+    }
+
+    greetingLink.textContent = message;
+}
+
+// Обновляем приветствие при загрузке страницы
+updateGreeting();
+document.addEventListener('DOMContentLoaded', () => {
+    const widget = document.querySelector('.sw-app');
+    if (widget) {
+        console.log('Widget initialized');
+    } else {
+        console.error('Widget not found!');
+    }
+});
+function updateGreeting() {
+    const currentHour = new Date().getHours();
+    const greetingText = document.getElementById("greeting-text");
+
+    if (currentHour >= 5 && currentHour < 12) {
+        greetingText.textContent = "Доброе утро! Новый день — новые приключения!";
+    } else if (currentHour >= 12 && currentHour < 18) {
+        greetingText.textContent = "Добрый день! Ваш комфорт — наша забота!";
+    } else {
+        greetingText.textContent = "После вечеринки? Мы доставим вас домой в безопасности!";
+    }
+}
+
+// Обновляем приветствие при загрузке страницы
+document.addEventListener("DOMContentLoaded", updateGreeting);

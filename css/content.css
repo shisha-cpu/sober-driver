@@ -344,3 +344,40 @@ section {
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
     z-index: 0; /* Ставим псевдоэлемент за текст */
 }
+.greeting-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    z-index: 9999;
+    width: 200px;
+}
+
+#greeting-text {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.call-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4de448e5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: #3cb63f;
+}
