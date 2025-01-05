@@ -1,11 +1,11 @@
-let isScrolling = false; // Флаг для предотвращения многократной прокрутки
+let isScrolling = false; 
 
 document.addEventListener('wheel', (e) => {
     e.preventDefault();
 
-    if (isScrolling) return; // Если сейчас идет прокрутка, игнорируем дальнейшие события
+    if (isScrolling) return; 
 
-    isScrolling = true; // Устанавливаем флаг, чтобы предотвратить множественные прокрутки
+    isScrolling = true; 
     const sections = document.querySelectorAll('.section');
     const scrollDirection = e.deltaY > 0 ? 'down' : 'up';
     const currentSection = [...sections].findIndex(section => {
@@ -23,37 +23,35 @@ document.addEventListener('wheel', (e) => {
         }
     }
 
-    // Делаем паузу перед следующим событием прокрутки
+
     setTimeout(() => {
-        isScrolling = false; // Сбрасываем флаг через 1 секунду
-    }, 1000); // Таймаут на 1 секунду
+        isScrolling = false; 
+    }, 1000);
 });
 
-// Функция для плавной прокрутки к секции
+
 function scrollToSection(section) {
     section.scrollIntoView({
         behavior: 'smooth',
-        block: 'start' // Прокручиваем к началу секции
+        block: 'start' 
     });
 }
 
-// Функция для обновления прогресса ползунка
 function updateProgressBar() {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPosition = window.scrollY;
     const progressBar = document.querySelector('.progress');
 
-    // Вычисляем процент прокрутки
     const progressHeight = (scrollPosition / scrollableHeight) * 100;
 
-    // Обновляем высоту ползунка
+
     progressBar.style.height = progressHeight + '%';
 }
 
-// Добавляем обработчик события scroll для обновления ползунка
+
 window.addEventListener('scroll', updateProgressBar);
 
-// Вызываем функцию сразу, чтобы ползунок отобразился корректно при загрузке страницы
+
 updateProgressBar();
 function updateGreeting() {
     const hours = new Date().getHours();
@@ -71,7 +69,7 @@ function updateGreeting() {
     greetingLink.textContent = message;
 }
 
-// Обновляем приветствие при загрузке страницы
+
 updateGreeting();
 document.addEventListener('DOMContentLoaded', () => {
     const widget = document.querySelector('.sw-app');
@@ -94,5 +92,5 @@ function updateGreeting() {
     }
 }
 
-// Обновляем приветствие при загрузке страницы
+
 document.addEventListener("DOMContentLoaded", updateGreeting);

@@ -1,4 +1,4 @@
-/* Общие стили */
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -171,7 +171,6 @@ section {
     z-index: 1000;
 }
 
-/* Стили для движущейся части ползунка */
 .progress {
     width: 100%;
     height: 0;
@@ -179,7 +178,6 @@ section {
     transition: height 0.3s ease;
 }
 
-/* Основной контейнер для секции */
 .section.sec02 {
     background-color: #f4f7fc;
     display: flex;
@@ -260,7 +258,7 @@ section {
     color: #007bff;
 }
 
-/* Мобильная адаптивность */
+
 @media (max-width: 768px) {
     .section .content {
         padding: 30px 15px;
@@ -300,7 +298,7 @@ section {
     min-width: 100vw;
     min-height: 100vh;
     
-    position: relative; /* Чтобы текст не накладывался на псевдоэлемент */
+    position: relative; 
     z-index: 1;
     padding: 20px;
     color: white;
@@ -327,11 +325,11 @@ section {
     background-position: center center;
 }
 .content-block {
-    position: relative; /* Чтобы текст не накладывался на псевдоэлемент */
+    position: relative; 
     z-index: 1;
     padding: 20px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавление теней к тексту для улучшения читаемости */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .qwq::before {
@@ -341,8 +339,8 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-    z-index: 0; /* Ставим псевдоэлемент за текст */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; 
 }
 .greeting-widget {
     position: fixed;

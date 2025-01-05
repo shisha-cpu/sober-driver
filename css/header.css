@@ -164,7 +164,7 @@
 }
 
 .hero h1 {
-    font-size: 5vw; /* Используем vw вместо svw */
+    font-size: 5vw; 
     line-height: 1.3;
 }
 
@@ -176,34 +176,34 @@
     line-height: 3;
 }
 
-/* Мобильный адаптив */
+
 @media (max-width: 768px) {
     .hero {
-        padding-top: 50px; /* Уменьшаем верхний отступ для мобильных устройств */
+        padding-top: 50px;
 
     }
 
     .hero h1 {
-        font-size: 8vw; /* Меньше размер шрифта на мобильных */
+        font-size: 8vw; 
     }
 
     .hero h1 span {
-        font-size: 20px; /* Меньше размер шрифта для span */
-        padding-bottom: 8px; /* Меньше отступ снизу */
+        font-size: 20px; 
+        padding-bottom: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 30px; /* Еще меньше отступ на очень маленьких экранах */
+        padding-top: 30px; 
     }
 
     .hero h1 {
-        font-size: 10vw; /* Еще меньше размер шрифта */
+        font-size: 10vw; 
     }
 
     .hero h1 span {
-        font-size: 18px; /* Еще меньше размер для span */
+        font-size: 18px; 
     }
 }
 
